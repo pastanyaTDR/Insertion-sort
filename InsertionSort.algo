@@ -1,0 +1,14 @@
+ALGORITHM InsertionSort(arr)
+VAR
+    i, j, key: integers
+BEGIN
+    FOR i FROM 1 TO LENGTH(arr) - 1
+        key = arr[i]
+        j = i - 1
+        WHILE j >= 0 AND arr[j] > key
+            arr[j + 1] = arr[j]
+            j = j - 1
+        END WHILE
+        arr[j + 1] = key
+    END FOR
+END
